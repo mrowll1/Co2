@@ -1,10 +1,12 @@
-# energy_co2_report.sh
+# CO2 emmision estimator 
 
 Author: **Furkan Dincer**  
 Contact: [f.dincer@juelich.de](mailto:f.dincer@juelich.de)  
 Affiliation: Jülich Supercomputing Centre (JSC)
 
 ---
+
+If you want to have an idea about how badly your computations are polluting and feel bad about it, you are in the right place!
 
 A Bash script to calculate the energy consumption and estimated CO₂ emissions of an HPC job on SLURM-managed systems (e.g., JURECA at JSC).  
 It separates **scientific compute energy** from the **total job footprint**, enabling accurate sustainability metrics for research workloads.
