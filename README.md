@@ -70,10 +70,19 @@ In order to improve code efficiency you can use LLview to monitor every single d
 
 - Click you name. Here you can see details information about jobs ended in the last 3 weeks.
 
-- Red color in usage means your code is not efficiently using the nodes.
+- Red color in usage means your code is not efficiently using the nodes. (You can see how red my codes are. Don't be me!)
 
 ![Sample Output](LLview.png)
 
+- In case you are someone who is hungry for more knowledge, put your mouse on top of the microscopic sized graph symbol shown in the pic as Here!!. you can reach a detailed view of that specific job. You also have current power usage here.
+
+- And the button right next to it downloads the job report. 
+
+## ⚠️ General warning
+
+Assumed CO2 conversion factor is just the average of Germany! I am working on getting real numbers for Juelich.
+
+PS. If you will be using Jupiter exascale cluster, good for you. All of its energy is provided by renewable. 
 
 
 
