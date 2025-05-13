@@ -37,6 +37,8 @@ Tested on: **JURECA (JSC)** both gpu and cpu!
 
 Just copy the file where ever you want and run with the job ID in the system you want to check. Only important thing is the job ID.
 
+And I do not consider cooling here. When I have information about it, I will add its effect. 
+
 ```bash
 chmod +x energy_co2_report.sh
 ./energy_co2_report.sh <SLURM_JOB_ID>
