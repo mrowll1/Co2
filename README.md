@@ -41,6 +41,7 @@ Just copy the file where ever you want and run with the job ID in the system you
 chmod +x energy_co2_report.sh
 ./energy_co2_report.sh <SLURM_JOB_ID>
 
+
 ## 📋 Example Output
 
 --------------------ᓀ ᵥ ᓂ-----------------------
@@ -56,3 +57,25 @@ chmod +x energy_co2_report.sh
    Energy (kWh):                 5.165719 kWh
    CO₂ Emission (total):         2453.716525 grams
 --------------------ᓀ ᵥ ᓂ-----------------------
+```
+
+## 🖥️ Suggestions -LLview
+In order to improve code efficiency you can use LLview to monitor every single detail.
+
+- Simple go to: [on the official JSC page](https://www.fz-juelich.de/en/ias/jsc/services/user-support/software-tools/llview?expand=translations,fzjsettings,nearest-institut)
+
+- Select the JSC system you are using.
+
+- Enter your JuDoor credentials.
+
+- Click you name. Here you can see details information about jobs ended in the last 3 weeks.
+
+- Red color in usage means your code is not efficiently using the nodes.
+
+![Sample Output](LLview.png)
+
+
+
+
+
+
