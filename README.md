@@ -15,17 +15,17 @@ It separates **scientific compute energy** from the **total job footprint**, ena
 
 ---
 
-## 🔍 What It Does
+## What It Does
 
 This script retrieves job-level energy consumption from SLURM’s accounting system using `sacct`, and computes:
 
-- ⚡ **Scientific Compute Energy** — from the main compute step (usually `.0`)
-- 🌍 **Total Job Footprint Energy** — includes all setup, wrapper, and retry steps
-- ♻️ **Estimated CO₂ emissions** — using a user-defined CO₂ per kWh factor (default: 475 g CO₂/kWh)
+-  **Scientific Compute Energy** — from the main compute step (usually `.0`)
+-  **Total Job Footprint Energy** — includes all setup, wrapper, and retry steps
+-  **Estimated CO₂ emissions** — using a user-defined CO₂ per kWh factor (default: 475 g CO₂/kWh)
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 - SLURM with energy accounting enabled
 - The following SLURM tools must be available:
@@ -37,18 +37,17 @@ Tested on: **JURECA (JSC)** both gpu and cpu!
 
 ---
 
-## 🚀 Usage
+##  Usage
 
-Just copy the file where ever you want and run with the job ID in the system you want to check. Only important thing is the job ID.
+Run the file wherever you want. Only important thing is the job ID.
 
-And I do not consider cooling here. When I have information about it, I will add its effect. 
 
 ```bash
 chmod +x energy_co2_report.sh
 ./energy_co2_report.sh <SLURM_JOB_ID>
 
 
-## 📋 Example Output
+##  Example Output
 
 --------------------ᓀ ᵥ ᓂ-----------------------
  Job ID:                         13657864
@@ -65,7 +64,7 @@ chmod +x energy_co2_report.sh
 --------------------ᓀ ᵥ ᓂ-----------------------
 ```
 
-## 🖥️ Suggestions -LLview
+##  Suggestions -LLview
 In order to improve code efficiency you can use LLview to monitor every single detail.
 
 - Simple go to: [on the official JSC page](https://www.fz-juelich.de/en/ias/jsc/services/user-support/software-tools/llview?expand=translations,fzjsettings,nearest-institut)
@@ -87,6 +86,8 @@ In order to improve code efficiency you can use LLview to monitor every single d
 ## ⚠️ General warning
 
 Assumed CO2 conversion factor is just the average of Germany! I am working on getting real numbers for Juelich.
+
+And I do not consider cooling here. When I have information about it, I will add its effect. 
 
 PS. If you will be using Jupiter exascale cluster, good for you. All of its energy is provided by renewable. 
 
