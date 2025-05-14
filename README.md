@@ -72,7 +72,7 @@ In order to improve code efficiency you can use LLview to monitor every single d
 
 - Enter your JuDoor credentials.
 
-- Click you name. Here you can see details information about jobs ended in the last 3 weeks.
+- Click your name. Here you can see details information about jobs ended in the last 3 weeks.
 
 - Red color in usage means your code is not efficiently using the nodes. (You can see how red my codes are. Don't be me!)
 
