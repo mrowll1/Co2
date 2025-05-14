@@ -43,14 +43,13 @@ Run the file wherever you want. Only important thing is the job ID.
 
 
 ```bash
-chmod +x energy_co2_report.sh
 ./energy_co2_report.sh <SLURM_JOB_ID>
 
 
 ##  Example Output
 
 --------------------ᓀ ᵥ ᓂ-----------------------
- Job ID:                         13657864
+ Job ID:                        <SLURM_JOB_ID>
 
  ▶ Scientific Compute Step (.0)
    Energy:                       6291420 J
