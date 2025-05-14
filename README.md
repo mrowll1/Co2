@@ -21,7 +21,7 @@ This script retrieves job-level energy consumption from SLURM’s accounting sys
 
 -  **Scientific Compute Energy** — from the main compute step (usually `.0`)
 -  **Total Job Footprint Energy** — includes all setup, wrapper, and retry steps
--  **Estimated CO₂ emissions** — using a user-defined CO₂ per kWh factor (default: 475 g CO₂/kWh)
+-  **Estimated CO₂ emissions** — using a user-defined CO₂ per kWh factor (default: 380 g CO₂/kWh)
 
 ---
 
