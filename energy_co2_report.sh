@@ -9,7 +9,7 @@ if [ -z "$1" ]; then
 fi
 
 JOBID="$1"
-EMISSION_FACTOR=475  # grams CO₂ per kWh
+EMISSION_FACTOR=380  # grams CO₂ per kWh
 
 # Get scientific compute step energy (.0)
 SCIENTIFIC_JOULES=$(sacct -j "$JOBID" --format=JobID,ConsumedEnergyRaw --parsable2 --noheader | \
