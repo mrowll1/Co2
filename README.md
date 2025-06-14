@@ -116,7 +116,7 @@ The first part of the code is shown below. This is where you need to make the ch
 
 ![Sample Output](code.png)
 
-The example output is shown below. Sums are written on top.
+The example output is shown below. Sums are written on top. Timestamp shown when the job was run (start time).
 
 ![Sample Output](data.png)
 
