@@ -103,6 +103,22 @@ For each job:
   
   - Sum of estimated CO₂ emissions.
 
+## How to use it
+
+You should designate the directory where you want to save the energy_report.dat file. 
+
+And arrange the lookback time: They are the days that the code looks back. Initially, designated as 1 year.
+
+The conversion factor is the sum of cooling and energy expenditures corresponding to the CO2 emission calculated for Julich's system. 
+It is the average value of different systems' maximums. Therefore, it points to an upper limit for your emission values. 
+
+The first part of the code is shown below. This is where you need to make the changes for the directory and the assumed conversion factor if you have numbers for your system
+
+![Sample Output](code.png)
+
+The example output is shown below. Sums are written on top.
+
+![Sample Output](data.png)
 
 ##  Suggestions -LLview
 To improve code efficiency, you can use LLview to monitor every single detail.
