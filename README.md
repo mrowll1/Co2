@@ -6,9 +6,9 @@ Affiliation: Jülich Supercomputing Centre (JSC)
 
 ---
 
-If you want to have an idea about how badly your computations are polluting and feel bad about it, you are in the right place!
+If you want to know how badly your computations are polluting and feel bad about it, you are in the right place!
 
-## energy_co2_report.sh:
+## energy_co2_report_old.sh:
 
 A Bash script to calculate the energy consumption and estimated CO₂ emissions of an HPC job on SLURM-managed systems (e.g., JURECA at JSC).  
 It separates **scientific compute energy** from the **total job footprint**, enabling accurate sustainability metrics for research workloads.
@@ -21,7 +21,7 @@ This script retrieves job-level energy consumption from SLURM’s accounting sys
 
 -  **Scientific Compute Energy** — from the main compute step (usually `.0`)
 -  **Total Job Footprint Energy** — includes all setup, wrapper, and retry steps
--  **Estimated CO₂ emissions** — using a user-defined CO₂ per kWh factor (default: 380 g CO₂/kWh)
+-  **Estimated CO₂ emissions** — using a user-defined CO₂ per kWh factor (default: 175 g CO₂/kWh)
 
 ---
 
@@ -39,7 +39,7 @@ Tested on: **JURECA (JSC)** both gpu and cpu!
 
 ##  Usage
 
-Run the file wherever you want. Only important thing is the job ID.
+Run the file wherever you want. The only important thing is the job ID.
 
 
 ```bash
@@ -63,8 +63,37 @@ Run the file wherever you want. Only important thing is the job ID.
 --------------------ᓀ ᵥ ᓂ-----------------------
 ```
 
+## energy_co2_report.sh:
+
+It does the same calculations as the old version. In addition, it gathers all the information about the jobs that were done in a given period.
+It also writes all the results in a .dat file to a given directory.
+
+## What does it do:
+
+-Scans SLURM job history:
+    -Looks back over the last N days (default: 10) and retrieves jobs that have completed, failed, or timed out.
+
+-Skips duplicates:
+    -Only appends data for jobs not already recorded in the output report.
+
+-Retrieves energy metrics:
+  -For each job:
+      -Gets energy used by the main compute step (scientific compute energy, from sub-steps). 
+      -Gets total job energy (all steps combined).
+
+  -Calculates and logs:
+      -Scientific and total energy in kilojoules (kJ) and kilowatt-hours (kWh).
+      -Estimated CO₂ emissions (g), using a configurable emissions factor (default: 174 g/kWh).
+      -Job partition and UTC start timestamp.
+
+-Summarizes totals:
+  -At the top of the report, writes:
+      -The sum of scientific and total energy across all recorded jobs.
+      -The sum of estimated CO₂ emissions.
+
+
 ##  Suggestions -LLview
-In order to improve code efficiency you can use LLview to monitor every single detail.
+To improve code efficiency, you can use LLview to monitor every single detail.
 
 - Simple go to: [on the official JSC page](https://www.fz-juelich.de/en/ias/jsc/services/user-support/software-tools/llview?expand=translations,fzjsettings,nearest-institut)
 
@@ -74,7 +103,7 @@ In order to improve code efficiency you can use LLview to monitor every single d
 
 - Click your name. Here you can see details information about jobs ended in the last 3 weeks.
 
-- Red color in usage means your code is not efficiently using the nodes. (You can see how red my codes are. Don't be me!)
+- Red colour in usage means your code is not efficiently using the nodes. (You can see how red my codes are. Don't be me!)
 
 ![Sample Output](LLview.png)
 
@@ -84,11 +113,9 @@ In order to improve code efficiency you can use LLview to monitor every single d
 
 ## ⚠️ General warning
 
-Assumed CO2 conversion factor is just the average of Germany! I am working on getting real numbers for Juelich.
+The assumed CO2 conversion factor is the maximum of the average in the Juelich Supercomputer Centre (JSC) with cooling effect included. 
 
-And I do not consider cooling here. When I have information about it, I will add its effect. 
-
-PS. If you will be using Jupiter exascale cluster, good for you. All of its energy is provided by renewable. 
+PS. If you will be using the Jupiter exascale cluster, good for you. All of its energy is provided by renewable sources. 
 
 
 
