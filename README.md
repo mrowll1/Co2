@@ -70,13 +70,16 @@ It also writes all the results in a .dat file to a given directory.
 
 ## What does it do:
 
--Scans SLURM job history:
+1.Scans SLURM job history:
+    
     -Looks back over the last N days (default: 10) and retrieves jobs that have completed, failed, or timed out.
 
 -Skips duplicates:
+    
     -Only appends data for jobs not already recorded in the output report.
 
--Retrieves energy metrics:
+2.Retrieves energy metrics:
+  
   -For each job:
       -Gets energy used by the main compute step (scientific compute energy, from sub-steps). 
       -Gets total job energy (all steps combined).
@@ -86,7 +89,7 @@ It also writes all the results in a .dat file to a given directory.
       -Estimated CO₂ emissions (g), using a configurable emissions factor (default: 174 g/kWh).
       -Job partition and UTC start timestamp.
 
--Summarizes totals:
+3.Summarizes totals:
   -At the top of the report, writes:
       -The sum of scientific and total energy across all recorded jobs.
       -The sum of estimated CO₂ emissions.
