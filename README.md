@@ -70,40 +70,39 @@ It also writes all the results in a .dat file to a given directory.
 
 ## What does it do:
 
-1️⃣ Scans SLURM Job History
+1. Scans SLURM Job History
 Looks back over the last N days (default: 10).
 
 Retrieves jobs with status: COMPLETED, FAILED, or TIMEOUT.
 
 Skips duplicates — only appends data for jobs not already recorded in the output report.
 
-2️⃣ Retrieves Energy Metrics
+2️. Retrieves Energy Metrics
 For each job:
 
-Gets energy used by the main compute step (scientific compute energy, from sub-steps).
+-Gets energy used by the main compute step (scientific compute energy, from sub-steps).
 
-Gets total job energy (all steps combined).
+-Gets total job energy (all steps combined).
 
-Calculates and logs:
+3. Calculates and log:
 
-🔋 Scientific & total energy:
-
-Kilojoules (kJ)
-
-Kilowatt-hours (kWh)
-
-🌍 Estimated CO₂ emissions (g), using configurable emission factor (default: 174 g/kWh).
-
-🖥 Job partition
-
-🕒 Job start time (UTC)
-
-3️⃣ Summarizes Totals
-At the top of the report:
-
-✅ Sum of scientific and total energy across all recorded jobs.
-
-✅ Sum of estimated CO₂ emissions.
+  Scientific & total energy:
+  
+  - Kilojoules (kJ)
+  
+  - Kilowatt-hours (kWh)
+  
+  - Estimated CO₂ emissions (g), using configurable emission factor (default: 174 g/kWh).
+  
+  - Job partition
+  
+  - Job start time (UTC)
+  
+  Summarizes Totals At the top of the report:
+  
+  - Sum of scientific and total energy across all recorded jobs.
+  
+  - Sum of estimated CO₂ emissions.
 
 
 ##  Suggestions -LLview
