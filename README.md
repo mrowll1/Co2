@@ -69,7 +69,6 @@ It does the same calculations as the old version. In addition, it gathers all th
 It also writes all the results in a .dat file to a given directory.
 
 ## What does it do:
-
 1. Scans SLURM Job History
 Looks back over the last N days (default: 10).
 
