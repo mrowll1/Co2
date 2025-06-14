@@ -70,13 +70,13 @@ It also writes all the results in a .dat file to a given directory.
 
 ## What does it do:
 1. Scans SLURM Job History
-Looks back over the last N days (default: 10).
+Looks back over the last N days (default: 365 days).
 
 Retrieves jobs with status: COMPLETED, FAILED, or TIMEOUT.
 
 Skips duplicates — only appends data for jobs not already recorded in the output report.
 
-2️. Retrieves Energy Metrics
+  2️. Retrieves Energy Metrics
 For each job:
 
 -Gets energy used by the main compute step (scientific compute energy, from sub-steps).
