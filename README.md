@@ -1,4 +1,4 @@
-# CO2 Emision Calculator
+# CO2 Emission Calculator
 
 Author: **Furkan Dincer**  
 Contact: [f.dincer@juelich.de](mailto:f.dincer@juelich.de)  
