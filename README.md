@@ -195,6 +195,7 @@ PS. If you will be using the Jupiter exascale cluster, good for you. All of its 
     Invest in training for your team on HPC performance analysis, energy-efficient programming, and modern languages.
 
 
+For more information: https://ui.adsabs.harvard.edu/abs/2025FrP....1342474S/abstract
 
 
 
