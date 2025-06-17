@@ -146,6 +146,57 @@ The assumed CO2 conversion factor is the maximum of the average in the Juelich S
 PS. If you will be using the Jupiter exascale cluster, good for you. All of its energy is provided by renewable sources. 
 
 
+## Guidelines for scientists to reduce computational CO₂ production
+
+1️⃣ Improve code performance
+
+    Profile your codes (e.g., with roofline models, DIMEMAS, Vampir) to identify bottlenecks.
+
+    Optimize for fewer data movements, improved cache usage, and minimal idling.
+
+    Use high-performance numerical libraries tuned for your hardware (e.g., vendor BLAS, HDF5 for I/O).
+
+2️⃣ Embrace modern hardware efficiently
+
+    Port codes to GPU and other accelerators, especially for compute-intensive or massively parallel parts.
+
+    Where possible, exploit low-precision arithmetic without compromising scientific accuracy.
+
+3️⃣ Design for modularity and portability
+
+    Separate hardware-specific code from scientific core logic to ease future adaptation.
+
+    Use portable programming models (SYCL, Kokkos, OpenMP, etc.) to prepare for heterogeneous and future architectures.
+
+4️⃣ Reduce and reuse data
+
+    Apply FAIR principles: make simulation results findable, accessible, interoperable, reusable.
+
+    Share simulation outputs and intermediate results to avoid duplicated runs.
+
+5️⃣ Plan resource use carefully
+
+    Activate only necessary physical processes and models for the scientific question at hand.
+
+    Choose minimal necessary computational resources and monitor for high utilization during the run.
+
+    Prioritize co-scheduling and efficient job packing when offered by HPC centers.
+
+6️⃣ Benchmark and tune for energy
+
+    Before large production runs, benchmark to find configurations with the best performance per Watt.
+
+    Explore reducing operational frequency in memory-bound applications where it doesn’t increase runtime significantly.
+
+7️⃣ Engage with HPC support and training
+
+    Collaborate with HPC experts or Research Software Engineers (RSEs).
+
+    Invest in training for your team on HPC performance analysis, energy-efficient programming, and modern languages.
+
+
+
+
 
 
 
