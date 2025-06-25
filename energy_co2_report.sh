@@ -7,7 +7,7 @@
 
 LOOKBACK_DAYS=10  # Change this to control how many days to look back
 EMISSION_FACTOR=174  # grams CO₂ per kWh
-ENERGY_OUTPUT_DIR="/p/project1/slaa/furkan_test_dir/energy"
+ENERGY_OUTPUT_DIR="" #enter your directory to save the file here!
 OUTPUT_FILE="$ENERGY_OUTPUT_DIR/energy_report.dat"
 TEMP_FILE=$(mktemp)
 
