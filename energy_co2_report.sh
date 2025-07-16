@@ -5,7 +5,7 @@
 #              Timestamp is the actual job START time (UTC) from SLURM.
 #              Adjustable lookback time via LOOKBACK_DAYS variable.
 
-LOOKBACK_DAYS=10  # Change this to control how many days to look back
+LOOKBACK_DAYS=365  # Change this to control how many days to look back
 EMISSION_FACTOR=174  # grams CO₂ per kWh
 ENERGY_OUTPUT_DIR="OUTPUT DIRECTORY" #enter your directory to save the file here!
 OUTPUT_FILE="$ENERGY_OUTPUT_DIR/energy_report.dat"
